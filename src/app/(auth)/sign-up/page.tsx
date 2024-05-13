@@ -67,9 +67,10 @@ export default function SignUpForm() {
 
   const onSubmit = async (data: z.infer<typeof signUpSchema>) => {
     setIsSubmitting(true);
+    console.log("button db rhi hai")
     try {
       const response = await axios.post<ApiResponse>('/api/sign-up', data);
-
+      console.log("button db rhi hai")
       toast({
         title: 'Success',
         description: response.data.message,
