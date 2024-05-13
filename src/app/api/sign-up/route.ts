@@ -54,7 +54,8 @@ export async function POST(request: Request) {
         password: hashedPassword,
         verifyCode,
         verifyCodeExpiry: expiryDate,
-        isVerified: false,
+        // ise verified ko ture kra hai jb resend chalne lge to false krna hai
+        isVerified: true,
         isAcceptingMessages: true,
         messages: [],
       });

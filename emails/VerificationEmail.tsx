@@ -17,6 +17,8 @@ interface VerificationEmailProps {
 
 export default function VerificationEmail({ username, otp }: VerificationEmailProps) {
   return (
+    <>
+    {console.log("email bn gyi")}
     <Html lang="en" dir="ltr">
       <Head>
         <title>Verification Code</title>
@@ -60,5 +62,6 @@ export default function VerificationEmail({ username, otp }: VerificationEmailPr
         </Row> */}
       </Section>
     </Html>
+    </>
   );
 }
