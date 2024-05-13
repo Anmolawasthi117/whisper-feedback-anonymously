@@ -55,6 +55,7 @@ export default function SignInForm() {
     }
 
     if (result?.url) {
+      console.log('bhai sb shi chl rha hai')
       router.replace('/dashboard');
     }
   };
@@ -92,7 +93,8 @@ export default function SignInForm() {
                 </FormItem>
               )}
             />
-            <Button className='w-full' type="submit">Sign In</Button>
+            
+            <Button className='w-full' type="submit">Sign In </Button>
           </form>
         </Form>
         <div className="text-center mt-4">
