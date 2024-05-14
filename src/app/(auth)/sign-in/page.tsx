@@ -58,6 +58,7 @@ export default function SignInForm() {
 
     if (result?.url) {
       console.log('bhai sb shi chl rha hai')
+      console.log(result.url)
       router.replace('/dashboard');
     }
   };
