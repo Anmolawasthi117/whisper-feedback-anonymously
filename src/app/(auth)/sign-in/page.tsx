@@ -14,7 +14,7 @@ import {
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
+import { permanentRedirect, useRouter } from 'next/navigation';
 import { useToast } from '@/components/ui/use-toast';
 import { signInSchema } from '@/schemas/signInSchema';
 
@@ -61,7 +61,7 @@ export default function SignInForm() {
       console.log(result.url)
       console.log(result)
 
-      router.replace('/dashboard');
+      permanentRedirect('/dashboard');
       console.log("redirect ho raha haa")
     }
   };
