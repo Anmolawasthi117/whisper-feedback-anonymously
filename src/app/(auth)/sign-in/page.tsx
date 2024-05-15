@@ -17,6 +17,7 @@ import Link from 'next/link';
 import {  useRouter } from 'next/navigation';
 import { useToast } from '@/components/ui/use-toast';
 import { signInSchema } from '@/schemas/signInSchema';
+import Credentials from 'next-auth/providers/credentials';
 
 export default function SignInForm() {
   const router = useRouter();
@@ -33,7 +34,7 @@ export default function SignInForm() {
   const onSubmit = async (data: z.infer<typeof signInSchema>) => {
     console.log("button db rhi hai")
     const result = await signIn('credentials', {
-      redirect: false,
+      redirect: true,
       identifier: data.identifier,
       password: data.password,
     });
@@ -58,8 +59,8 @@ export default function SignInForm() {
 
     if (result?.url) {
       console.log('bhai sb shi chl rha hai')
-      console.log(result.url)
       console.log(result)
+      console.log(Credentials)
       router.push("/dashboard");   
       console.log("redirect ho raha haa")
     }
