@@ -61,7 +61,7 @@ export default function SignInForm() {
       console.log(result.url)
       console.log(result)
 
-      permanentRedirect('/dashboard');
+      await permanentRedirect('/dashboard');
       console.log("redirect ho raha haa")
     }
   };
