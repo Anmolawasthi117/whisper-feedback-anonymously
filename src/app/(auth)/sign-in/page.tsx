@@ -62,6 +62,7 @@ export default function SignInForm() {
       console.log(result)
 
       router.replace('/dashboard');
+      console.log("redirect ho raha haa")
     }
   };
 
